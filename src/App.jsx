@@ -231,6 +231,7 @@ export default function App() {
   );
   /* ── QUIZ SCREEN ──────────────────────────────────────────── */
   if (phase === "quiz") {
+    if (currentQ >= questions.length) { setPhase("results"); return null; }
     const q = questions[currentQ];
     return (
       <div style={bg}>
